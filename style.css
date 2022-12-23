@@ -13,7 +13,7 @@ body{
 }
 
 .main{
-    width: clamp(90px, 50vw, 300px);
+    width: clamp(90px, 70vw, 300px);
     position: relative;
     margin: auto;
     margin-top: clamp(2rem, 20vh, 6rem);
