@@ -1,0 +1,119 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    position: relative;
+    background: rgba(196, 191, 191, 0.8);
+}
+
+.main{
+    width: clamp(100px, 90vw, 300px);
+    position: relative;
+    margin: auto;
+    margin-top: clamp(2rem, 20vh, 6rem);
+    background: white;
+    padding: clamp(1rem, 80vw, 2rem);
+    border-radius: clamp(5px, 5vw, 10px);
+}
+
+.head{
+    font-size: clamp(1rem, 5vw, 3rem);
+    text-align: center;
+    padding: clamp(1rem, 5vw, 2rem);
+    font-weight: bold;
+    color: rgba(99, 187, 178, 0.8);
+}
+
+.other_methods{
+    width: clamp(98px, 40vw, 100px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(1rem, 5vh, 3rem);
+}
+
+#icon{
+    font-size: clamp(10px, 5vw, 30px);
+    padding: clamp(1px, 5vw, 4px);
+    color: rgba(68, 224, 209, 0.4);
+}
+
+form{
+    width: 100%;
+}
+
+.name{
+    width: 100%;
+    position: relative;
+}
+
+.container input{
+    width: 98%;
+    padding: clamp(4px, 5vw, 8px);
+    position: relative;
+    outline: none;
+    border: clamp(1px, 5vh, 3px) solid rgba(0, 0, 0, 0.3);
+    border-radius: clamp(5px, 5vw, 10px);
+    font-size: clamp(10px, 5vw, 12px);
+}
+
+.container label{
+    position: relative;
+    bottom: 28px;
+    left: 17px;
+    font-size: clamp(10px, 5vw, 12px);
+    color: rgb(26, 25, 25);
+    cursor: text;
+    transition: bottom 100ms ease-in,
+                left 100ms ease-in,
+                font-size 100ms ease-in;
+                color: 100ms ease-in;
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label{
+    bottom: 45px;
+    left: 15px;
+    font-size: clamp(8px, 5vw, 10px);
+    background: white;
+    padding-inline: 5px;
+    color: rgba(26, 25, 25, 0.7);
+}
+
+.btn{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(6px, 5vw, 8px);
+}
+
+.btn button{
+   padding-block: clamp(3px, 5vw, 5px);
+   padding-inline: clamp(6px, 5vw, 10px);
+   border-radius: clamp(4px, 5vw, 8px);
+   outline: none;
+   border: none;
+   background: rgba(68, 224, 209, 0.4);
+   font-size: clamp(12px, 5vw, 16px);
+   font-weight: normal;
+   color: rgb(36, 35, 35);
+   font-family: sans-serif;
+}
+
+.btn button:focus{
+    box-shadow: 0px 0px 2px 4px rgb(204, 195, 195);
+}
+
+.login p{
+    font-size: 12px;
+    width: 100%;
+}
