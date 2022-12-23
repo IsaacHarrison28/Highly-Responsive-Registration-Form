@@ -13,7 +13,7 @@ body{
 }
 
 .main{
-    width: clamp(100px, 90vw, 300px);
+    width: clamp(90px, 50vw, 300px);
     position: relative;
     margin: auto;
     margin-top: clamp(2rem, 20vh, 6rem);
@@ -23,7 +23,7 @@ body{
 }
 
 .head{
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
     padding: clamp(1rem, 5vw, 2rem);
     font-weight: bold;
