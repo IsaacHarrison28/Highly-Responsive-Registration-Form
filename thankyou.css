@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background: rgba(35, 182, 35, 0.7);
+    --text-color: rgba(236, 230, 230, 0.8);
+    --link-color: rgb(103, 103, 226);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background: var(--background);
+    width: 90%;
+    max-width: 350px;
+    height: max-content;
+    position: relative;
+    top: clamp(20px, 20vh, 100px);
+    border-radius: 1.2rem;
+}
+
+h3{
+    font-size: clamp(30px, 8vw, 18px);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+p{
+    padding: clamp(.6rem, 5vw, 1rem);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+a{
+    color: var(--link-color);
+}
