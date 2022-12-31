@@ -12,15 +12,13 @@
     <div class="main">
         <div class="head">Sign Up</div>
         <P id="message"></P>
-        <p id="message-2"></p>
-        <p id="message-3"></p>
-        <form action="">
+        <form action="thankyou.html" method="GET" id="main_form">
             <div class="container">
-                <input type="text" class="form_input" placeholder=" " id="name" value="">
+                <input type="text"  autocomplete="off"  class="form_input" placeholder=" " id="name">
                 <label for="form_input" class="form_label"><i class="fa-solid fa-user" id="user"></i> Name</label>
             </div>
             <div class="container">
-                <input type="text/email"  autocomplete="off" value="" class="form_input" placeholder=" " id="email">
+                <input type="email"  autocomplete="on" class="form_input" placeholder=" " id="email">
                 <label for="email_input" class="form_label"><i class="fa-solid fa-envelope"></i> Email</label>
             </div>
             <div class="container">
@@ -31,8 +29,8 @@
                 <input type="password" class="form_input" placeholder=" " id="confirmPassword">
                 <label for="confirm_password" class="form_label">Confirm password</label>
             </div>
-            <div class="btn">
-                <button id="submitBtn">Submit</button>
+            <div id="btn">
+                <button id="submitBtn" type="submit">Submit</button>
             </div>
         </form>
         <div class="login">
@@ -42,4 +40,4 @@
 
     <script src="javascript.js"></script>
 </body>
-</html>
+</html> 

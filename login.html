@@ -11,22 +11,21 @@
     <div class="main">
         <div class="head">Log In</div>
         <P id="message"></P>
-        <p id="message-2"></p>
-        <form action="">
+        <form action="thankyou.html" method="GET" id="main_form">
             <div class="container">
-                <input type="text" class="form_input" placeholder=" " id="name" value="">
+                <input type="text"  autocomplete="off"  class="form_input" placeholder=" " id="name">
                 <label for="form_input" class="form_label"><i class="fa-solid fa-user" id="user"></i> Name</label>
             </div>
             <div class="container">
-                <input type="text/email"  autocomplete="off" value="" class="form_input" placeholder=" " id="email">
+                <input type="email"  autocomplete="on" class="form_input" placeholder=" " id="email">
                 <label for="email_input" class="form_label"><i class="fa-solid fa-envelope"></i> Email</label>
             </div>
             <div class="container">
                 <input type="password" class="form_input" placeholder=" " id="password">
                 <label for="password_input" class="form_label"><i class="fa-solid fa-lock"></i> Password</label>
             </div>
-            <div class="btn">
-                <button id="submitBtn">Log-In</button>
+            <div id="btn">
+                <button id="submitBtn" type="submit">Log In</button>
             </div>
         </form>
         <div class="login">

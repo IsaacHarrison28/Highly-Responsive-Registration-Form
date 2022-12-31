@@ -1,43 +1,36 @@
-const inputName = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const password = document.getElementById('password');
-const checkPassword = document.getElementById('confirmPassword');
-const submit = document.getElementById('submitBtn');
-const message = document.getElementById('message');
-const emailMessage = document.getElementById('message-2');
-const passwordMessage = document.getElementById('message-3');
+const form = document.getElementById('main_form')
+const nameInput = document.getElementById('name')
+const email = document.getElementById('email')
+const password = document.getElementById('password')
+const checkPassword = document.getElementById('confirmPassword')
+const errorMessage = document.getElementById('message')
 
+form.addEventListener('submit', (e) => {
+    let messages = []
 
-let runFunction = () => {
-    let inputValue = inputName.value;
-    let secondValue = emailInput.value;
-    if(inputValue.length === 0){
-        inputName.style.cssText = 'border: 2px solid red;'
-        message.innerText= "Please Enter Your Name!"
-    }else if(secondValue.length === 0){
-        emailInput.style.cssText = 'border: 2px solid red;'
-        emailMessage.innerText = "Please Your Email Address!"
-    }else if(password.value !== checkPassword.value){
-        password.style.cssText = 'border: 2px solid red;'
-        passwordMessage.innerText = "Passwords do not match!"
+    if ( nameInput.value === '' || nameInput.value == null ) {
+        messages.push("Please Enter Your Name")
     }
-};
 
-let passwordCondition = () => {
-    if(password.value.length < 5){
-        passwordMessage.innerText = "Password cannot be less than 6 digits!";
+    if(password.value.length < 6){
+        messages.push("password required with atleast six digits")
     }
-}
 
-
-let clearPasswordMessage = () => {
-    if( passwordMessage.innerText = "Password cannot be less than 6 digits!" ){
-        passwordMessage.innerText = " "
+    if( email.value === '' || email.value == null ){
+        messages.push("Enter Your Email")
     }
-}
 
+    if( password.value === "password" ){
+        messages.push("password cannot be password")
+    }
 
+    if( password.value !== checkPassword.value ){
+        messages.push("Your password do not match")
+    }
 
-password.addEventListener('click', clearPasswordMessage)
-checkPassword.addEventListener('click', passwordCondition)
-submit.addEventListener('click', runFunction);
+    if(messages.length > 0){
+        e.preventDefault()
+        errorMessage.innerText = messages.join(', ')
+    }
+    
+})

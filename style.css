@@ -72,7 +72,8 @@ form{
     color: rgba(26, 25, 25, 0.7);
 }
 
-.btn{
+#btn{
+
     position: relative;
     width: 100%;
     display: flex;
@@ -81,7 +82,7 @@ form{
     margin-bottom: clamp(6px, 5vw, 8px);
 }
 
-.btn button{
+#btn button{
    padding-block: clamp(3px, 5vw, 5px);
    padding-inline: clamp(6px, 5vw, 10px);
    border-radius: clamp(4px, 5vw, 8px);
@@ -94,20 +95,15 @@ form{
    font-family: sans-serif;
 }
 
-.btn button:focus{
-    box-shadow: 0px 0px 2px 4px rgb(204, 195, 195);
-}
+#btn button
 
-.login p,
-#message,
-#message-2{
+.login p{
     font-size: 12px;
     width: 100%;
 }
 
-#message,
-#message-2,
-#message-3{
+#message{
+    font-size: clamp(12px, 5vw, 10px);
     text-align: center;
     color: red;
     margin-bottom: 10px;
